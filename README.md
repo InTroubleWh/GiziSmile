@@ -218,7 +218,7 @@ SUPABASE_SERVICE_ROLE_KEY=kunci-service-role-anda
 
 ### 5. Inisialisasi Database (Supabase SQL)
 Buka menu **SQL Editor** pada dashboard proyek Supabase Anda, lalu eksekusi berkas berikut secara berurutan:
-1. `supabase/migrations/20261029000000_init_gizisync_schema.sql` (atau `supabase/schema.sql`): Membentuk enum, tabel, indeks, RLS policy, fungsi, dan trigger.
+1. `supabase/migrations/20261029054646_remote_schema.sql` 
 2. `supabase/seed.sql`: Mengisi master data komoditas pangan lokal, nilai gizi TKPI 2020, harga pasar harian, dan data uji balita Posyandu.
 
 ### 6. Menjalankan Server Pengembangan
