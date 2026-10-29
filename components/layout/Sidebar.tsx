@@ -168,7 +168,7 @@ export function Sidebar({
           <p className="text-[11px] text-muted-foreground leading-relaxed">
             Masuk dengan akun Kader atau Ahli Gizi untuk mencatat rekam medis balita dan mendapatkan rekomendasi resep cerdas.
           </p>
-          <Link href="/login" className="block pt-1">
+          <Link href="/auth/login" className="block pt-1">
             <Button size="sm" className="w-full h-7 text-xs bg-emerald-600 hover:bg-emerald-700 text-white gap-1">
               <LogIn className="w-3 h-3" />
               Masuk Sekarang
@@ -184,7 +184,7 @@ export function Sidebar({
           <span>Kesiapan Mode Luring</span>
         </div>
         <p className="text-[10px] text-muted-foreground leading-relaxed">
-          Kalkulator Z-Score dan antrean lokal dapat berjalan tanpa internet di wilayah pelosok.
+          Kalkulator antropometri tetap dapat digunakan tanpa sinyal internet. Data akan disimpan di browser.
         </p>
       </div>
     </aside>

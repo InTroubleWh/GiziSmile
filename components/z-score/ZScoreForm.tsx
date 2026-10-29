@@ -499,7 +499,7 @@ export function ZScoreForm({ childrenList = [] }: ZScoreFormProps) {
                     <Calculator className="w-4 h-4" />
                     Perbarui Perhitungan Z-Score
                   </Button>
-                  <Link href="/login" className="block w-full">
+                  <Link href="/auth/login" className="block w-full">
                     <Button
                       type="button"
                       variant="outline"

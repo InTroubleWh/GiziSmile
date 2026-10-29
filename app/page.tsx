@@ -40,17 +40,17 @@ export default function Home() {
             <Link href="/z-score" className="hover:text-foreground transition-colors">
               Kalkulator Z-Score
             </Link>
-            <Link href="/recipes" className="hover:text-foreground transition-colors">
+            <Link href="/recipes" prefetch={false} className="hover:text-foreground transition-colors">
               Resep Gizi Cerdas
             </Link>
-            <Link href="/analytics" className="hover:text-foreground transition-colors">
+            <Link href="/analytics" prefetch={false} className="hover:text-foreground transition-colors">
               Analitik Wilayah
             </Link>
           </nav>
 
           <div className="flex items-center gap-3">
             <ThemeSwitcher />
-            <Link href="/login">
+            <Link href="/auth/login">
               <Button size="sm" className="h-9 text-xs font-semibold gap-1.5">
                 Masuk (1-Click Demo)
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -89,14 +89,14 @@ export default function Home() {
             </Button>
           </Link>
 
-          <Link href="/recipes">
+          <Link href="/recipes" prefetch={false}>
             <Button size="lg" variant="outline" className="h-11 px-6 font-semibold gap-2">
               <UtensilsCrossed className="w-4 h-4 text-emerald-600" />
               Katalog Resep Gizi
             </Button>
           </Link>
 
-          <Link href="/login">
+          <Link href="/auth/login">
             <Button size="lg" variant="secondary" className="h-11 px-6 font-semibold gap-2">
               <Users className="w-4 h-4" />
               1-Click Demo Juri
@@ -147,7 +147,7 @@ export default function Home() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <Link href="/recipes" className="text-xs font-semibold text-blue-600 hover:underline flex items-center gap-1">
+              <Link href="/recipes" prefetch={false} className="text-xs font-semibold text-blue-600 hover:underline flex items-center gap-1">
                 Eksplorasi Resep Gizi <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </CardContent>
@@ -165,7 +165,7 @@ export default function Home() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <Link href="/analytics" className="text-xs font-semibold text-purple-600 hover:underline flex items-center gap-1">
+              <Link href="/analytics" prefetch={false} className="text-xs font-semibold text-purple-600 hover:underline flex items-center gap-1">
                 Lihat Dashboard Wilayah <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </CardContent>
@@ -200,16 +200,16 @@ export default function Home() {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
           <p>© 2026 GiziSmile — Tim KABEL ARYA KEBAKAR (Muhammad Kemal Syah Rafi &amp; Muhammad Ervin Fadillah).</p>
           <div className="flex items-center gap-4">
-            <Link href="/login" className="hover:underline">
+            <Link href="/auth/login" className="hover:underline">
               Demo Login
             </Link>
             <Link href="/z-score" className="hover:underline">
               Kalkulator
             </Link>
-            <Link href="/recipes" className="hover:underline">
+            <Link href="/recipes" prefetch={false} className="hover:underline">
               Resep Gizi
             </Link>
-            <Link href="/analytics" className="hover:underline">
+            <Link href="/analytics" prefetch={false} className="hover:underline">
               Analitik
             </Link>
           </div>

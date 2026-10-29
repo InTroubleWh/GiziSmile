@@ -147,7 +147,7 @@ export function Navbar({
             {hasAccount ? (
               <LogoutButton />
             ) : (
-              <Link href="/login">
+              <Link href="/auth/login">
                 <Button size="sm" className="h-8 text-xs font-semibold gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white">
                   <LogIn className="w-3.5 h-3.5" />
                   Masuk Akun
@@ -215,7 +215,7 @@ export function Navbar({
             {hasAccount ? (
               <LogoutButton />
             ) : (
-              <Link href="/login" onClick={() => setMobileOpen(false)}>
+              <Link href="/auth/login" onClick={() => setMobileOpen(false)}>
                 <Button size="sm" className="h-8 text-xs font-semibold gap-1 bg-emerald-600 hover:bg-emerald-700 text-white">
                   <LogIn className="w-3.5 h-3.5" />
                   Masuk

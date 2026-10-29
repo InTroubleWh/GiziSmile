@@ -19,8 +19,7 @@ export function OfflineAuthGuard({ serverAuthenticated }: OfflineAuthGuardProps)
     const isPublic =
       pathname === "/z-score" ||
       pathname === "/" ||
-      pathname.startsWith("/auth") ||
-      pathname.startsWith("/login");
+      pathname.startsWith("/auth");
 
     if (isPublic) return;
 

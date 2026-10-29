@@ -1,15 +1,13 @@
-const CACHE_NAME = "gizismile-shell-v1";
+const CACHE_NAME = "gizismile-shell-v2";
 const STATIC_ASSETS = [
   "/",
   "/z-score",
-  "/recipes",
-  "/children",
-  "/analytics",
   "/manifest.json",
-  "/favicon.ico"
+  "/favicon.ico",
+  "/Logo_GiziSmile.svg"
 ];
 
-// Install: Cache aset inti aplikasi (app shell)
+// Install: Cache aset inti aplikasi (app shell publik saja)
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
@@ -39,10 +37,23 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
 
+  const url = new URL(event.request.url);
+
+  // Jangan tangani atau cache rute auth, rute API, atau panggilan eksternal Supabase
+  if (
+    url.pathname.startsWith("/auth") ||
+    url.pathname.startsWith("/api") ||
+    url.pathname.startsWith("/login") ||
+    url.hostname.includes("supabase")
+  ) {
+    return;
+  }
+
   event.respondWith(
     fetch(event.request)
       .then((response) => {
-        if (!response || response.status !== 200) {
+        // Jangan cache jika status bukan 200 atau respon merupakan hasil redirect (misal redirect ke login)
+        if (!response || response.status !== 200 || response.redirected) {
           return response;
         }
         const responseToCache = response.clone();
@@ -58,7 +69,6 @@ self.addEventListener("fetch", (event) => {
 
         // Jika request navigasi (pindah halaman), cari cache berdasarkan path
         if (event.request.mode === "navigate") {
-          const url = new URL(event.request.url);
           const pathMatch = await caches.match(url.pathname);
           if (pathMatch) return pathMatch;
         }

@@ -14,7 +14,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { UserCheck, Stethoscope, HeartHandshake, Loader2, ShieldCheck } from "lucide-react";
 
@@ -66,7 +65,6 @@ export function LoginForm({
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [activeDemo, setActiveDemo] = useState<string | null>(null);
-  const router = useRouter();
 
   const handleLogin = async (
     e?: React.FormEvent,
@@ -113,8 +111,8 @@ export function LoginForm({
 
           if (!signUpError && signUpData.user) {
             const destination = demoAccount.role === "admin" ? "/admin/users" : "/z-score";
-            router.push(destination);
-            router.refresh();
+            // Hard navigation untuk mereset seluruh router cache dan prefetch unauthenticated
+            window.location.href = destination;
             return;
           }
         }
@@ -133,8 +131,8 @@ export function LoginForm({
       }
 
       const destination = userRole === "admin" ? "/admin/users" : "/z-score";
-      router.push(destination);
-      router.refresh();
+      // Hard navigation untuk mereset seluruh router cache dan prefetch unauthenticated
+      window.location.href = destination;
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : "Gagal masuk ke akun");
     } finally {
