@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1bd568cb-9f32-49c9-9486-bbf3c62513a7",
+    "age_group_code": "0_5",
+    "age_min_months": 0,
+    "age_max_months": 5,
+    "calories_kcal": 550.0,
+    "protein_g": 9.0,
+    "fat_g": 31.0,
+    "calcium_mg": 200.0,
+    "iron_mg": 0.3,
+    "zinc_mg": 1.1,
+    "source": "Permenkes No. 28 Tahun 2019",
+    "source_year": 2019,
+    "created_at": "2026-10-26T07:32:46.167708Z"
+  },
+  {
+    "id": "90e970be-c150-411d-84d1-a308ff59437e",
+    "age_group_code": "6_11",
+    "age_min_months": 6,
+    "age_max_months": 11,
+    "calories_kcal": 800.0,
+    "protein_g": 15.0,
+    "fat_g": 35.0,
+    "calcium_mg": 270.0,
+    "iron_mg": 11.0,
+    "zinc_mg": 3.0,
+    "source": "Permenkes No. 28 Tahun 2019",
+    "source_year": 2019,
+    "created_at": "2026-10-26T07:32:46.170067Z"
+  },
+  {
+    "id": "9990b718-7eb8-41a1-aa2c-7c787b6f4558",
+    "age_group_code": "12_36",
+    "age_min_months": 12,
+    "age_max_months": 36,
+    "calories_kcal": 1350.0,
+    "protein_g": 20.0,
+    "fat_g": 45.0,
+    "calcium_mg": 650.0,
+    "iron_mg": 7.0,
+    "zinc_mg": 3.0,
+    "source": "Permenkes No. 28 Tahun 2019",
+    "source_year": 2019,
+    "created_at": "2026-10-26T07:32:46.172256Z"
+  },
+  {
+    "id": "255396d8-f02b-4fbd-b2f8-a6b2cdcecf49",
+    "age_group_code": "37_72",
+    "age_min_months": 37,
+    "age_max_months": 72,
+    "calories_kcal": 1400.0,
+    "protein_g": 25.0,
+    "fat_g": 50.0,
+    "calcium_mg": 1000.0,
+    "iron_mg": 10.0,
+    "zinc_mg": 5.0,
+    "source": "Permenkes No. 28 Tahun 2019",
+    "source_year": 2019,
+    "created_at": "2026-10-26T07:32:46.174460Z"
+  }
+]
